@@ -47,7 +47,7 @@ void Crawler::move() {
         }
 
         setIsWayBlocked(false); // Reset way blocked flag
-        recordPathHistory(); // Record path history after moving
+
         setCurrentPosition(MovedtoPosition);
     } else {
         // Move 1 tile in the direction its facing
@@ -70,7 +70,7 @@ void Crawler::move() {
                     MovedtoPosition.x--;
                 break;
         }
-        recordPathHistory(); // Record path history after moving
+
         setCurrentPosition(MovedtoPosition); // sets the bug's new position
     }
 }

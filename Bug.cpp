@@ -81,62 +81,24 @@ void Bug::setIsWayBlocked(bool isWayBlocked) {
 bool Bug::CheckIsWayBlocked() {
     bool WayBlocked = false;
 
-    int x = position.x; // Using member variable directly
-    int y = position.y; // Using member variable directly
+    int x = position.x;
+    int y = position.y;
 
     if (direction == Direction::North || direction == Direction::South) {
         if (y <= 1 || y >= 10) {
-            setIsWayBlocked(true); // Using member function to set isWayBlocked
+            setIsWayBlocked(true);
             WayBlocked = true;
         }
     }
 
     if (direction == Direction::East || direction == Direction::West) {
         if (x <= 1 || x >= 10) {
-            setIsWayBlocked(true); // Using member function to set isWayBlocked
+            setIsWayBlocked(true);
             WayBlocked = true;
         }
     }
 
     return WayBlocked;
-}
-
-
-
-void Bug::displayPathHistory() const
-{
-    cout <<"Bug" << id << " which is a ";
-    if (type == 'C')
-    {
-        cout<<"Crawler :";
-    }
-
-    else if (type == 'H')
-    {
-        cout<<"Hopper :";
-    }
-
-    else
-    {
-        cout<<"Flyer :";
-    }
-
-    for (const Position& StorePosition : path)
-    {
-        cout << "(" << StorePosition.x << "," << StorePosition.y << ")" ;
-    }
-
-    if(alive == true)
-    {
-        cout<< " Alive";
-    }
-
-    else
-    {
-        cout<<" Dead";
-    }
-
-    cout << endl;
 }
 
 

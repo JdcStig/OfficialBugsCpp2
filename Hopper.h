@@ -1,6 +1,4 @@
-//
-// Created by duffy on 15/04/2024.
-//
+
 
 #ifndef LATESTBUGSCPP_HOPPER_H
 #define LATESTBUGSCPP_HOPPER_H

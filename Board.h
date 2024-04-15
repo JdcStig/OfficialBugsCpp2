@@ -1,6 +1,4 @@
-//
-// Created by duffy on 15/04/2024.
-//
+
 #include "Bug.h"
 #include <vector>
 
@@ -13,7 +11,8 @@ public:
     void createBugs(std::vector<Bug*>& bugs);
     void displayAllBugs(const std::vector<Bug*>& bugs);
     Bug* findBugById(const std::vector<Bug*>& bugs, int id);
-
+    void tap(std::vector<Bug*>& bugs);
+    void MoveBugs(std::vector<Bug*>& bugs);
 
 };
 

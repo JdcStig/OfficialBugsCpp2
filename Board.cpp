@@ -1,6 +1,4 @@
-//
-// Created by duffy on 15/04/2024.
-//
+
 
 #include "Crawler.h"
 #include "Bug.h"
@@ -114,7 +112,7 @@ void Board::createBugs(vector<Bug*>& bugs) {
         getline(ss, token, ';'); // hop Length
         int hopLength = stoi(token);
 
-        // Create instances of derived classes Crawler or Hopper
+        // Create Crawler or Hopper
         Bug* bug;
         if (type == 'C') {
             bug = new Crawler(type, id, x, y, direction, size, hopLength, true, false);
@@ -126,7 +124,7 @@ void Board::createBugs(vector<Bug*>& bugs) {
             continue;
         }
 
-//        bug->recordPathHistory();
+
         bugs.push_back(bug);
     }
     inputFile.close();
@@ -164,5 +162,21 @@ Bug* Board::findBugById(const vector<Bug*>& bugs, int id) {
     return nullptr;
 }
 
+
+void Board::tap(vector<Bug*>& bugs)
+{
+    cout << "Tap" << endl;
+    MoveBugs(bugs);
+}
+
+void Board::MoveBugs(vector<Bug*>& bugs)
+{
+    cout << "MoveBugs" << endl;
+    cout << bugs.size() << endl;
+    for (int i = 0; i < bugs.size(); i++)
+    {
+        bugs[i]->move();
+    }
+}
 
 

@@ -36,9 +36,8 @@ public:
     virtual void move()=0;
 
 
-    void recordPathHistory();// pushes position into the list
 
-    void displayPathHistory() const; //calls to view the list
+
 
 
 

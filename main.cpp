@@ -30,7 +30,7 @@ int main() {
 
         switch (choice) {
             case 1:
-                board.createBugs(bugs); // Use the Board instance to create bugs
+                board.createBugs(bugs);
                 cout << "\nBugs have been created.\n" << endl;
                 break;
 
@@ -48,7 +48,7 @@ int main() {
             }
 
             case 4:
-
+                board.tap(bugs);
                 break;
 
             case 5:
@@ -65,12 +65,12 @@ int main() {
                 break;
 
             case 7:
-                board.displayAllCells(bugs);
+
                 break;
 
 
             case 8:
-                // Implement exit
+
                 break;
 
             default:

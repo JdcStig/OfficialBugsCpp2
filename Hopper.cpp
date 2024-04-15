@@ -3,7 +3,7 @@
 
 Hopper::Hopper(char type, int id, int x, int y, Direction direction, int size, int hopLength, bool alive , bool isWayBlocked)
         : Bug(type, id, x, y, direction, size, hopLength, alive, isWayBlocked) {
-    // Initialize Crawler variables in the Crawler class
+
 }
 
 
@@ -48,9 +48,9 @@ void Hopper::move() {
                 break;
         }
 
-        setIsWayBlocked(false); // Reset way blocked flag
+        setIsWayBlocked(false);
 
-        recordPathHistory(); // Record path history after moving
+
 
     } else {
         // Move 1 tile in the direction its facing
@@ -77,7 +77,6 @@ void Hopper::move() {
                 setCurrentPosition(MovedtoPosition);
                 break;
         }
-        recordPathHistory(); // Record path history after moving
 
     }
 }
